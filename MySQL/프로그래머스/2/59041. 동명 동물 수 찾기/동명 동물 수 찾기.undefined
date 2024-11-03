@@ -1,0 +1,7 @@
+-- 코드를 입력하세요
+SELECT NAME, count(NAME) AS COUNT
+FROM ANIMAL_INS
+WHERE NAME IS NOT NULL #이름 없는 동물 집계 제외
+GROUP BY NAME
+HAVING COUNT >= 2 #그룹에서 필터링
+ORDER BY NAME;
